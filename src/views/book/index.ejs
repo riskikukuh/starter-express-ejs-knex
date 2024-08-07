@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book | Tech Stack Express, EJS, Knex</title>
+</head>
+<body>
+    <h2>Listing Book</h2>
+    <a href="/books/add">Create</a>
+    <br>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (locals.books) { %>
+                <% for (var i=0; i < books.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= books[i].id %>
+                        </td>
+                        <td>
+                            <%= books[i].name %>
+                        </td>
+                        <td>
+                            <%= books[i].description %>
+                        </td>
+                        <td>
+                            <a href="<%= `/books/${books[i].id}/edit` %>">Edit</a>
+                            <a href="<%= `/books/${books[i].id}/delete` %>">Delete</a>
+                        </td>
+                    </tr>
+                <% } %>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

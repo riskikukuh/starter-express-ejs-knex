@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book | Tech Stack Express, EJS, Knex</title>
+</head>
+<body>
+    <h1>Add Book</h1>
+    <form action="<%= `/books/${book.id}/edit` %>" method="post">
+        <input type="text" name="name" placeholder="Name" value="<%= book.name %>">
+        <input type="text" name="description" placeholder="Description" value="<%= book.description %>">
+        <input type="submit">
+    </form>
+</body>
+</html>

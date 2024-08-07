@@ -1,0 +1,32 @@
+{
+  "name": "express-ejs-knex",
+  "version": "1.0.0",
+  "description": "Tech Stack JS - Express, Ejs, Knex",
+  "main": "index.js",
+  "scripts": {
+    "debug": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migration:make": "knex migrate:make",
+    "migration:up": "knex migrate:up",
+    "migration:down": "knex migrate:down",
+    "db:init": "knex init"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "date-fns": "^2.30.0",
+    "date-fns-tz": "^2.0.0",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "knex": "^2.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.5.2"
+  }
+}
